@@ -4,8 +4,8 @@ const Navbar = () =>
     <nav id="navbar">
         <ul id="navbar__list">
             <li id="navbar__list__item">
-                <Link href="/works" id="navbar__list__item__link">
-                    <a>Works</a>
+                <Link href="/works" >
+                    <a id="navbar__list__item__link">Works</a>
                 </Link>
             </li>
         </ul>

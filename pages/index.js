@@ -10,13 +10,14 @@ export default function Home(props) {
     <Layout>
       <Head>
         <title>Create Next App</title>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
       </Head>
       <main>
         <div id="hero">
-          <img id="hero__bg" src="/slim-bg.jpg" alt="slim model" loading="lazy" />
-          <div id="title-container" className="vertical-text">
-            <h1 id="title">XUNWANG</h1>
+          <div id="hero__inner">
+            <div id="title-container" className="vertical-text">
+              <h1 id="title">XUNWANG</h1>
+            </div>
+            <span id="author">Morris Wang</span>
           </div>
         </div>
       </main>
@@ -27,24 +28,35 @@ export default function Home(props) {
           #hero {
             width: 100%;
             height: 100vh;
-            min-height: 500px;
+            min-height: 600px;
+            position: relative;
+            background: url("/slim-bg.jpg");
+            background-size: cover;
+            background-position: 35% 50%;
           }
           #hero__bg {
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
-          #title-container {
+          #hero__inner {
             position: absolute;
-            left: 50%;
-            top: 30%;
-            transform: translate(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            top: 20%;
+            width: 100%;
+            height: 1500px;
           }
           #title {
             color: white;
             font-family: 'Ubuntu Mono', monospace;
             font-weight: 100;
             line-height: 1.5em;
+            margin: 0 0 2em 0;
+          }
+          #author {
+            color: white;
           }
         `}</style>
     </Layout >
